@@ -85,3 +85,10 @@
   font-size: 13px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 936px) {
+  .auth-section {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+}

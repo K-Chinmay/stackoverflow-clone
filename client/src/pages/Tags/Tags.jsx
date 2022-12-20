@@ -69,9 +69,9 @@ const Tags = () => {
   ];
 
   return (
-    <div className="home-container-1">
+    <div className="tag-container-1">
       <LeftSidebar />
-      <div className="home-container-2">
+      <div className="tag-container-2">
         <h1 className="tags-h1">Tags</h1>
         <p className="tags-p">
           A tag is a keyword or label that categorizes your question with other,

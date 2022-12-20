@@ -9,7 +9,7 @@
 
 .side-nav {
   height: auto;
-  max-width: 100%;
+  /* max-width: 100%; */
   position: sticky;
   margin: 50px 0px;
   padding: 20px 0px;
@@ -42,4 +42,10 @@
   color: black;
   background-color: rgb(225, 225, 225);
   border-right: solid 3px #ef8236;
+}
+
+@media screen and (max-width: 936px) {
+  .left-sidebar {
+    padding-top: 70px;
+  }
 }

@@ -19,9 +19,9 @@ const UserProfile = () => {
   const [Switch, setSwitch] = useState(false);
 
   return (
-    <div className="home-container-1">
+    <div className="profile-container-1">
       <LeftSidebar />
-      <div className="home-container-2">
+      <div className="profile-container-2">
         <section>
           <div className="user-details-container">
             <div className="user-details">

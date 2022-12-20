@@ -19,6 +19,7 @@ const Avatar = ({
     textAlign: "center",
     cursor: cursor || null,
     textDecoration: "none",
+    width: "15px",
   };
 
   return <div style={style}>{children}</div>;
