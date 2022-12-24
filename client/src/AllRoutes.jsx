@@ -8,6 +8,10 @@ import DisplayQuestion from "./pages/Questions/DisplayQuestion";
 import Tags from "./pages/Tags/Tags";
 import Users from "./pages/Users/Users";
 import UserProfile from "./pages/UserProfile/UserProfile";
+import Posts from "./pages/Posts/Posts";
+import PostDetails from "./pages/Posts/PostDetails";
+import TestPost from "./components/Test/TestPost";
+import DisplayPost from "./pages/Posts/DisplayPost";
 
 const AllRoutes = () => {
   return (
@@ -21,6 +25,9 @@ const AllRoutes = () => {
       <Route path="/Tags" element={<Tags />} />
       <Route path="/Users" element={<Users />} />
       <Route path="/Users/:id" element={<UserProfile />} />
+      <Route path="/community" element={<Posts />} />
+      <Route path="/posts/:id" element={<DisplayPost />} />
+      {/* <Route path="/Testpost" element={<TestPost />} /> */}
     </Routes>
   );
 };

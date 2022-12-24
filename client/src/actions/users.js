@@ -17,3 +17,21 @@ export const updateProfile = (id, updateData) => async (dispatch) => {
     console.log(error);
   }
 };
+
+export const followUser = (id, userId) => async (dispatch) => {
+  try {
+    await api.followUser(id, userId);
+    dispatch(fetchAllUsers());
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const unfollowUser = (id, userId) => async (dispatch) => {
+  try {
+    await api.unfollowUser(id, userId);
+    dispatch(fetchAllUsers());
+  } catch (error) {
+    console.log(error.message);
+  }
+};

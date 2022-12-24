@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import AllRoutes from "./AllRoutes";
 import { fetchAllQuestions } from "./actions/question.js";
 import { fetchAllUsers } from "./actions/users.js";
+import { getPosts } from "./actions/posts.js";
 
 function App() {
   const dispatch = useDispatch();
@@ -14,6 +15,8 @@ function App() {
   useEffect(() => {
     dispatch(fetchAllQuestions());
     dispatch(fetchAllUsers());
+    dispatch(getPosts());
+
     (function (d, m) {
       var kommunicateSettings = {
         appId: "3ad3cf2c75f1c82442963aee220936a97",

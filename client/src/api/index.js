@@ -15,6 +15,7 @@ API.interceptors.request.use((req) => {
 
 export const logIn = (authData) => API.post("/user/login", authData);
 export const signUp = (authData) => API.post("/user/signup", authData);
+
 export const postQuestion = (questionData) =>
   API.post("/questions/Ask", questionData);
 export const getAllQuestions = () => API.get("/questions/get");
@@ -35,3 +36,13 @@ export const deleteAnswer = (id, answerId, noOfAnswers) =>
 export const getAllUsers = () => API.get("/user/getAllUsers");
 export const updateProfile = (id, updateData) =>
   API.patch(`/user/update/${id}`, updateData);
+export const followUser = (id, userId) =>
+  API.patch(`/user/follow/${id}`, { userId });
+export const unfollowUser = (id, userId) =>
+  API.patch(`/user/unfollow/${id}`, { userId });
+
+export const sharePost = (post) => API.post("/community/createPost", post);
+export const fetchPosts = () => API.get("/community/getPosts");
+export const deletePost = (id) => API.delete(`/community/delete/${id}`);
+export const likePost = (id, value, userId) =>
+  API.patch(`/community/like/${id}`, { value, userId });
