@@ -135,6 +135,19 @@ const LeftSidebar = () => {
           >
             <p>Users</p>
           </NavLink>
+          <NavLink
+            to="/community"
+            className="side-nav-links"
+            activeclassname="active"
+            style={{
+              paddingLeft: "40px",
+              paddingTop: "1px",
+              paddingBottom: "1px",
+              display: isOpen ? "block" : "none",
+            }}
+          >
+            <p>Community</p>
+          </NavLink>
         </div>
       </nav>
     </div>
