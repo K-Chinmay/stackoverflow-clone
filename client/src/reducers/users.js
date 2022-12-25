@@ -6,6 +6,8 @@ const usersReducer = (states = [], action) => {
       return states.map((state) =>
         state._id === action.payload._id ? action.payload : state
       );
+    case "SEARCH_USER":
+      return action.payload;
     default:
       return states;
   }

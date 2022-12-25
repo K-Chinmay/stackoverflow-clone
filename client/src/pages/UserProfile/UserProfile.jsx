@@ -11,7 +11,7 @@ import EditProfileForm from "./EditProfileForm";
 import ProfileBio from "./ProfileBio";
 import "./UsersProfile.css";
 
-import { followUser, unfollowUser } from "../../actions/users";
+import { friendUser, unfriendUser } from "../../actions/users";
 
 const UserProfile = () => {
   const { id } = useParams();
@@ -21,12 +21,12 @@ const UserProfile = () => {
   const [Switch, setSwitch] = useState(false);
   const dispatch = useDispatch();
 
-  const handleFollow = () => {
-    dispatch(followUser(id, currentUser.result._id));
+  const handleFriend = () => {
+    dispatch(friendUser(id, currentUser.result._id));
   };
 
-  const handleUnfollow = () => {
-    dispatch(unfollowUser(id, currentUser.result._id));
+  const handleUnfriend = () => {
+    dispatch(unfriendUser(id, currentUser.result._id));
   };
 
   return (
@@ -49,26 +49,23 @@ const UserProfile = () => {
                 <h1>{currentProfile?.name}</h1>
                 <button
                   style={{ margin: "0px 7px" }}
-                  onClick={handleFollow}
+                  onClick={handleFriend}
                   className="followButton"
                 >
-                  Follow
+                  Friend
                 </button>
                 <button
                   style={{ margin: "0px 7px" }}
-                  onClick={handleUnfollow}
+                  onClick={handleUnfriend}
                   className="followButton"
                 >
-                  Unfollow
+                  Unfriend
                 </button>
                 <p>
                   <FontAwesomeIcon icon={faBirthdayCake} /> Joined{" "}
                   {moment(currentProfile?.joinedOn).fromNow()}
                 </p>
-                <p>
-                  {currentProfile.followers.length} Followers ,{" "}
-                  {currentProfile.following.length} Following
-                </p>
+                <p>{currentProfile.friends.length} Friends</p>
               </div>
             </div>
             {currentUser?.result?._id === id && (

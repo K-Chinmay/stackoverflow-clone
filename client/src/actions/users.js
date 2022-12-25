@@ -18,19 +18,28 @@ export const updateProfile = (id, updateData) => async (dispatch) => {
   }
 };
 
-export const followUser = (id, userId) => async (dispatch) => {
+export const friendUser = (id, userId) => async (dispatch) => {
   try {
-    await api.followUser(id, userId);
+    await api.friendUser(id, userId);
     dispatch(fetchAllUsers());
   } catch (error) {
     console.log(error.message);
   }
 };
 
-export const unfollowUser = (id, userId) => async (dispatch) => {
+export const unfriendUser = (id, userId) => async (dispatch) => {
   try {
-    await api.unfollowUser(id, userId);
+    await api.unfriendUser(id, userId);
     dispatch(fetchAllUsers());
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const searchUser = (query) => async (dispatch) => {
+  try {
+    const { data } = await api.searchUser(query);
+    dispatch({ type: "SEARCH_USER", payload: data });
   } catch (error) {
     console.log(error.message);
   }

@@ -1,7 +1,7 @@
 import axios from "axios";
 const API = axios.create({
-  baseURL: "https://stackoverflow-server-chinmay.onrender.com",
-  // baseURL: "http://localhost:5000",
+  // baseURL: "https://stackoverflow-server-chinmay.onrender.com",
+  baseURL: "http://localhost:5000",
 });
 
 API.interceptors.request.use((req) => {
@@ -36,10 +36,11 @@ export const deleteAnswer = (id, answerId, noOfAnswers) =>
 export const getAllUsers = () => API.get("/user/getAllUsers");
 export const updateProfile = (id, updateData) =>
   API.patch(`/user/update/${id}`, updateData);
-export const followUser = (id, userId) =>
-  API.patch(`/user/follow/${id}`, { userId });
-export const unfollowUser = (id, userId) =>
-  API.patch(`/user/unfollow/${id}`, { userId });
+export const searchUser = (query) => API.post("/user/search", query);
+export const friendUser = (id, userId) =>
+  API.patch(`/user/friend/${id}`, { userId });
+export const unfriendUser = (id, userId) =>
+  API.patch(`/user/unfriend/${id}`, { userId });
 
 export const sharePost = (post) => API.post("/community/createPost", post);
 export const fetchPosts = () => API.get("/community/getPosts");

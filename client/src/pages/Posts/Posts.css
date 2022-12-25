@@ -177,7 +177,7 @@
   box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
 }
 
-.post-right h3 {
+.post-right form {
   margin: 20px 20px;
 }
 
@@ -230,5 +230,11 @@
 @media screen and (max-width: 500px) {
   .share {
     height: 280px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .post {
+    margin: 100px 0px;
   }
 }

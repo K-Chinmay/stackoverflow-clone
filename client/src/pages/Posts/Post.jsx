@@ -34,13 +34,16 @@ const Post = ({ post }) => {
               }}
             >
               {/* C */}
-              {Users.filter((u) => u._id === post?.userId)[0]
-                .name.charAt(0)
-                .toUpperCase()}
+              {post.userPosted.charAt(0).toUpperCase()}
             </div>
             <span className="postUsername">
-              {Users.filter((u) => u._id === post?.userId)[0].name}
               {/* User name */}
+              <Link
+                to={`/Users/${post.userId}`}
+                style={{ textDecoration: "none" }}
+              >
+                {post.userPosted}
+              </Link>
             </span>
             <span className="postDate">
               posted {moment(post.createdAt).fromNow()}

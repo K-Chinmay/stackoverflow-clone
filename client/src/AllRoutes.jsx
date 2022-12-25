@@ -9,7 +9,6 @@ import Tags from "./pages/Tags/Tags";
 import Users from "./pages/Users/Users";
 import UserProfile from "./pages/UserProfile/UserProfile";
 import Posts from "./pages/Posts/Posts";
-import PostDetails from "./pages/Posts/PostDetails";
 import TestPost from "./components/Test/TestPost";
 import DisplayPost from "./pages/Posts/DisplayPost";
 

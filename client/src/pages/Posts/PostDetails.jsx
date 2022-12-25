@@ -66,7 +66,14 @@ const PostDetails = () => {
                     >
                       {post.userPosted.charAt(0).toUpperCase()}
                     </div>
-                    <span className="postUsername">{post.userPosted}</span>
+                    <span className="postUsername">
+                      <Link
+                        to={`/Users/${post.userId}`}
+                        style={{ textDecoration: "none" }}
+                      >
+                        {post.userPosted}
+                      </Link>
+                    </span>
                     <span className="postDate">
                       Posted {moment(post.createdAt).fromNow()}
                     </span>
