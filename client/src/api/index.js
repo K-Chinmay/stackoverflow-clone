@@ -1,7 +1,7 @@
 import axios from "axios";
 const API = axios.create({
-  // baseURL: "https://stackoverflow-server-chinmay.onrender.com",
-  baseURL: "http://localhost:5000",
+  baseURL: "https://stackoverflow-server-chinmay.onrender.com",
+  // baseURL: "http://localhost:5000",
 });
 
 API.interceptors.request.use((req) => {
