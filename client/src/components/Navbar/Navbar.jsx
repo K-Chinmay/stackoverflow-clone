@@ -120,22 +120,22 @@ const Testnav = () => {
       <input type="checkbox" id="check" />
       <nav className="main-nav1">
         <div className="navbar1">
-          <Link to="/" className="nav-item1 icon">
-            <img src={logo} alt="logo" width="150px" height="30px" />
+          <Link to="/" className="nav-item1 logo">
+            {/* <img src={logo} alt="logo" width="150px" height="30px" /> */}
+            <h1 style={{ fontSize: "20px" }}>
+              dev<strong>proximity</strong>
+            </h1>
           </Link>
-          <div className="search-box">
+          {/* <div className="search-box">
             <input type="search" placeholder="Search..." />
             <img src={search} alt="search" width="18" />
-          </div>
+          </div> */}
           <ul>
             <li className="nav-item1 nav-btn1">
               <a href="/">About</a>
             </li>
             <li className="nav-item1 nav-btn1">
               <a href="/">Products</a>
-            </li>
-            <li className="nav-item1 nav-btn1">
-              <a href="/">For Teams</a>
             </li>
             <div style={{ display: "flex", justifyContent: "center" }}>
               {User === null ? (

@@ -52,7 +52,7 @@ const Share = () => {
   return (
     <div className="share">
       <div className="shareWrapper">
-        <h1>Stackoverflow Community</h1>
+        <h1>Devloper Community</h1>
         <form
           action="../../public/files"
           // action="/createPost"

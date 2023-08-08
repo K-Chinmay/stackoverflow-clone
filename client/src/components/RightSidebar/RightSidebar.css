@@ -11,15 +11,18 @@
 }
 
 .widget h4 {
-  background-color: #fbf3d5;
+  /* background-color: #fbf3d5; */
+  background-color: #e3e3e0;
   margin: 0%;
   padding: 15px;
-  border: solid 1px #f1e5bc;
+  /* border: solid 1px #f1e5bc; */
+  border: solid 1px #f0ead7;
   font-size: 13px;
 }
 
 .right-sidebar-div-1 {
-  background-color: #fdf7e2;
+  /* background-color: #fdf7e2; */
+  background-color: white;
   padding: 15px;
   border: solid 1px #f1e5bc;
 }

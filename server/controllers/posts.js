@@ -32,7 +32,6 @@ export const deletePost = async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(_id)) {
     return res.status(404).send("post unavailable...");
   }
-
   try {
     await posts.findByIdAndRemove(_id);
     res.status(200).json({ message: "successfully deleted..." });

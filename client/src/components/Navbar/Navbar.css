@@ -95,7 +95,8 @@
   min-height: 50px;
   width: 100%;
   margin: 0% auto;
-  border-top: solid 3px #ef8236;
+  /* border-top: solid 3px #ef823f; */
+  border-top: solid 3px #bab9b5;
   box-shadow: 0px 1px 5px #00000033;
   position: fixed;
   z-index: 5;
@@ -142,11 +143,11 @@
   cursor: pointer;
 }
 
-.icon {
+.logo {
   /* font-size: 35px;
   font-weight: 800;
   cursor: pointer; */
-  padding: 5px 25px;
+  /* padding: 5px 25px; */
 }
 
 .main-nav1 ul {

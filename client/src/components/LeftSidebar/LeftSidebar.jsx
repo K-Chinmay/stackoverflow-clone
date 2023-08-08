@@ -98,7 +98,7 @@ const LeftSidebar = () => {
             className="side-nav-links"
             activeclassname="active"
           >
-            <img src={Globe} alt="Globe" />
+            {/* <img src={Globe} alt="Globe" /> */}
             <p
               style={{
                 paddingLeft: "10px",
